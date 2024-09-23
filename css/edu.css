@@ -1,0 +1,118 @@
+/* Education Section */
+.education-section {
+    background-color: #000; /* Black background for a cybersecurity feel */
+    color: #f2f2f2; /* Light gray text color */
+    padding: 4cm 2cm; /* Padding around the section */
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow to avoid content spill */
+    margin-top: -4.1cm;
+}
+
+/* Container for centering content */
+.education-container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center container */
+}
+
+/* Title Styling */
+.education-title {
+    font-size: 2.5rem; /* Adjusted font size for title */
+    color: #00ff00; /* Neon green for title */
+    margin-bottom: 20px; /* Adjust space below title */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    text-align: center; /* Center the title */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Glowing text effect */
+}
+
+/* List Styling */
+.education-list {
+    display: flex; /* Flexbox for item layout */
+    flex-direction: column; /* Stack items vertically */
+    gap:10px; /* Reduced space between items */
+}
+
+/* Individual Education Item */
+.education-item {
+    padding: 15px; /* Reduced padding inside item */
+    background-color: transparent; /* Transparent background for items */
+    border: none; /* No border */
+    border-radius: 0; /* No rounded corners */
+    display: flex; /* Flexbox layout for icon and text */
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Reduced space between icon and content */
+    min-height: 130px; /* Reduced minimum height for each item */
+}
+
+/* Icon Styling */
+.education-icon {
+    font-size: 2rem; /* Icon size */
+    color: #00ff00; /* Neon green */
+    margin-top: -1.5cm; /* Move icons 1.5cm up */
+}
+
+/* Education Content */
+.education-content {
+    flex: 1; /* Flex to take up remaining space */
+}
+
+/* Degree Styling */
+.education-degree {
+    font-size: 1.5rem; /* Adjusted font size for degree */
+    color: #fff; /* White color for Bachelor of Science */
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    position: relative;
+    padding: 10px; /* Padding inside the degree text */
+    border-left: 5px solid #00ff00; /* Highlight effect */
+    background-color: #000000; /* Dark background for degree text */
+}
+
+/* Degree Name and Course */
+.degree-name {
+    color: #fff; /* White color for degree name */
+}
+
+.degree-course {
+    color: #00ff00; /* Neon green for course details */
+    font-weight: bold;
+}
+
+/* Highlight Text */
+.highlight-green {
+    color: #00ff00; /* Neon green for highlighted text */
+    font-weight: bold; /* Bold text */
+}
+
+/* Institution and Duration Styling */
+.education-institution, .education-duration {
+    font-size: 1.2rem; /* Font size for institution and duration */
+    color: #f2f2f2; /* Light gray */
+    margin-bottom: 5px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .education-section {
+        padding: 2cm 1cm; /* Adjust padding for smaller screens */
+    }
+
+    .education-title {
+        font-size: 2rem; /* Smaller font size for title */
+    }
+
+    .education-item {
+        flex-direction: column; /* Stack icon and content vertically */
+        align-items: flex-start; /* Align items to start */
+        text-align: left; /* Align text to left */
+    }
+
+    .education-icon {
+        font-size: 1.5rem; /* Smaller icon size */
+        margin-bottom: 10px; /* Space between icon and content */
+        margin-top: -1.5cm; /* Move icons 1.5cm up */
+    }
+}

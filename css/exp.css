@@ -1,0 +1,103 @@
+/* Experience Section - Kali Linux-inspired Style */
+.experience-section {
+    background-color: #000000; /* Darker background, close to Kali's dark theme */
+    color: #c9d1d9; /* Soft, terminal-like text color */
+    padding: 60px 0;
+    font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #00ff00; /* Terminal green color */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: block;
+    padding-bottom: 10px;
+    /* Removed the underline (border-bottom) */
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.experience-item {
+    background: #000000; /* A subtle dark card color, typical of terminal UIs */
+    border: 1px solid #fefefe1d; /* Border similar to window borders in Linux */
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0px 5px 10px rgba(101, 249, 9, 0.281);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #00ff00; /* Terminal green line */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    border-color: #00ff00; /* Border glow effect on hover */
+}
+
+.experience-icon {
+    font-size: 40px;
+    color: #00ff00; /* Terminal green icon color */
+    margin-right: 20px;
+    align-self: center;
+}
+
+.experience-content {
+    flex-grow: 1;
+}
+
+.experience-role {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #f0f6fc; /* Light color for role */
+}
+
+.experience-dates {
+    font-size: 14px;
+    color: #00ff00; /* Muted terminal-like date color */
+    margin-bottom: 15px;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff; /* Light gray for readability */
+    line-height: 1.8;
+}
+
+.experience-details li:before {
+    content: ">> "; /* Terminal-like bullet points */
+    color: #00ff00; /* Terminal green */
+    margin-right: 5px;
+}
+
+.experience-details li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr; /* Single-column layout for mobile screens */
+    }
+}

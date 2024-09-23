@@ -1,0 +1,631 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #000; /* Black background for a hacking feel */
+    color: #00ff00; /* Neon green text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Name Banner */
+.name-banner {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #48f908;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+/* CLI Switch Button */
+.cli-switch-btn {
+    background-color: #111; /* Dark background for the button */
+    border: 2px solid #000000; /* Green border */
+    color: #04f504; /* Green text */
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 20px; /* Space between name and button */
+    position: relative;
+}
+
+/* CLI Icon Blinking Animation */
+.cli-icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size as needed */
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Button Hover Effect */
+.cli-switch-btn:hover {
+    background-color: #00FF00
+    ; /* Green background on hover */
+    color: #ffffff; /* Dark text on hover */
+}
+
+
+/* Navbar Styles */
+.navbar {
+    padding: 10px 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #00ff00;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+.nav-item a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00ff48;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-item a:hover::before {
+    transform: scaleX(1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 0.1cm;
+    top: 100%;
+    right: 0;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #00ff00;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: #00cc00;
+    background-color: rgba(0, 255, 0, 0.079);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ensure height takes up available space */
+    padding: 0 20px;
+    position: relative;
+    margin-top: 70px; /* Adjust this value to move closer to the name banner */
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ensure height takes up available space */
+    padding: 0 20px;
+    position: relative;
+    margin-top: 70px; /* Adjust this value to move closer to the name banner */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    position: absolute;
+    left: 4cm; /* Move the entire intro section 4 cm to the right */
+}
+
+.intro-text {
+    border-left: 2px solid #00ff00;
+    padding-left: 20px;
+    margin-right: 20px; /* Add some space between the text and the GIF */
+    flex: 1;
+}
+
+#intro-title {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 10px; /* Optional: Adjust spacing below the title if needed */
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .static-txt {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts {
+    height: 68px;
+    overflow: hidden;
+    margin-left: 15px;
+    line-height: 79px;
+}
+
+.dynamic-txts li {
+    color: #FC6D6D;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -318px;
+    }
+}
+
+.dynamic-txts li span {
+    position: relative;
+}
+
+.dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center; /* Center horizontally within its container */
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    margin-left: 3cm;
+    margin-top: 2cm; /* Move the GIF 3 cm from the left */
+}
+
+.gif-container img {
+    max-width: 100%; /* Ensure GIF scales appropriately */
+    height: auto;
+}
+
+/* Social Icons Styles */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 12cm;
+    margin-right: 22cm;  /* Adjusted to move social icons 7 cm down from the intro section */
+    padding: 20px;
+}
+
+.social-icon a {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+    margin: 0 8px;
+    text-align: center;
+    line-height: 45px;
+    transition: .3s;
+}
+
+.social-icon a:hover {
+    background: lawngreen; /* Neon green background on hover */
+    transform: rotate(135deg); /* Rotate on hover */
+    box-shadow: 0 0 5px lawngreen, 0 0 10px #4867AA; /* Glowing effect */
+}
+
+.social-icon a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #000000; /* Gray background for the pseudo-element */
+    z-index: -1;
+}
+
+.social-icon a i {
+    font-size: 23px;
+    color: #f2ecec; /* Black color for icons */
+    transition: .3s;
+}
+
+.social-icon a:hover i {
+    transform: rotate(225deg); /* Rotate icon on hover */
+    color: lawngreen; /* Neon green color for icons on hover */
+}
+
+/* About Section */
+.about-section {
+    background-color: #000; /* Black background for a cybersecurity feel */
+    color: #f2f2f2; /* Light gray text color */
+    padding: 5cm 2cm; /* Padding around the section */
+    min-height: 100vh; /* Full viewport height */
+    position: relative; /* Relative positioning */
+    top: 0; /* Ensure it starts at the top of the viewport */
+    margin-top: 0; /* No margin to push it down */
+    overflow: hidden; /* Hide overflow to avoid content spill */
+    display: flex; /* Use flexbox for image and text side by side */
+    align-items: center; /* Vertically center content */
+    justify-content: space-around; /* Space out image and text */
+}
+
+/* Container for centering content */
+.about-container {
+    max-width: 900px; /* Width control for better alignment */
+    margin: 0 auto; /* Center container */
+    display: flex; /* Flex for image and text alignment */
+    align-items: center;
+    justify-content: space-between; /* Space between image and text */
+}
+
+/* Image Styling */
+.about-image {
+    width: 40%; /* Adjust width for image size */
+    max-width: 350px; /* Set a max width */
+    height: auto; /* Keep image aspect ratio */
+    border-radius: 8px; /* Slight rounding of image corners */
+    box-shadow: 0 0 15px rgba(72, 249, 8, 0.5); /* Glowing effect around image */
+}
+
+/* Text container */
+.about-right {
+    width: 50%; /* Text container width */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Padding between image and text */
+}
+
+/* Title Styling */
+.about-title {
+    font-size: 3rem; /* Large font for title */
+    color: #00ff00; /* Neon green for title */
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glowing text effect */
+}
+
+/* Text Styling */
+.about-text {
+    font-size: 1.2rem; /* Readable font size */
+    line-height: 1.6; /* Space out lines */
+    color: #f2f2f2; /* Light gray text */
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
+}
+
+/* Highlight Text */
+.highlight {
+    color: #48f908; /* Neon green highlight */
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .about-image {
+        width: 70%; /* Increase image width for smaller screens */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .about-right {
+        width: 100%; /* Full width for text on small screens */
+        padding-left: 0; /* Remove left padding */
+    }
+}
+
+/* Contact and Maps Section */
+.contact-maps-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 4cm 2cm;
+    background-color: #000;
+    color: #f2f2f2;
+    margin-bottom: -cm;
+}
+
+/* Contact Section */
+.contact-container {
+    width: 45%; /* Adjust width as needed */
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: #00ff00; /* Terminal green */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Glowing effect */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #c9d1d9;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #00ff00;
+    background-color: #161b22;
+    color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #00cc00;
+}
+
+/* Maps Section */
+.maps-container {
+    width: 45%; /* Adjust width as needed */
+}
+
+.maps-title {
+    font-size: 2.5rem;
+    color: #00ff00; /* Terminal green */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Glowing effect */
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 0ch;
+}
+
+.maps-container iframe {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    border: 0;
+    border-radius: 10px;
+    margin-top:0cm;
+}
+
+@media (max-width: 768px) {
+    .contact-maps-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container,
+    .maps-container {
+        width: 100%;
+    }
+
+    .maps-container iframe {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+/* Terminal Footer Styles */
+.linux-terminal-footer {
+    background-color: #000000; /* Dark background resembling a Linux terminal */
+    color: #C0C0C0; /* Light grey text for the terminal */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #5ffb0b; /* Subtle top border */
+    box-shadow: #00ff48;
+}
+
+/* Terminal Container */
+.terminal-container {
+    display: inline-block;
+    background-color: #000000; /* Darker terminal background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 80%; /* Responsive width */
+    max-width: 700px;
+    border: 1px solid #3c3c3c; /* Border for the terminal container */
+}
+
+/* Terminal Header */
+.terminal-header {
+    display: flex;
+    align-items: center;
+    background-color: #3C3C3C; /* Header bar color */
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Header Icons */
+.terminal-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.terminal-icon.red {
+    background-color: #FF5F56; /* Close button color */
+}
+
+.terminal-icon.yellow {
+    background-color: #FFBD2E; /* Minimize button color */
+}
+
+.terminal-icon.green {
+    background-color: #27C93F; /* Maximize button color */
+}
+
+/* Terminal Title */
+.terminal-title {
+    margin-left: auto;
+    color: #C0C0C0; /* Light grey */
+    font-size: 0.9rem;
+}
+
+/* Terminal Body */
+.terminal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Add space below the input area */
+}
+
+/* Terminal Prompt */
+.terminal-prompt {
+    font-size: 1.1rem;
+    color: #C0C0C0; /* Light grey text */
+    margin-right: 10px;
+}
+
+/* Command Input */
+#command-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #1E1E1E; /* Input field color */
+    color: #C0C0C0; /* Input text color */
+    border-radius: 5px;
+    outline: none; /* Remove outline */
+    caret-color: #00ff00; /* Green caret */
+    margin-right: 10px;
+    font-family: inherit; /* Use the same font */
+}
+
+/* Run Button */
+.run-button {
+    padding: 10px 20px;
+    background-color: #000000; /* Blue button color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.run-button:hover {
+    background-color: #363636; /* Darker blue on hover */
+}
+
+/* Terminal Footer Text */
+.terminal-footer-text {
+    text-align: left;
+    color: #00FF00; /* Green text to resemble terminal output */
+    font-size: 0.9rem;
+    margin-top: 15px; /* Space above the footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #command-input {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .run-button {
+        width: 100%; /* Full width button */
+        justify-content: center;
+    }
+
+    .terminal-body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

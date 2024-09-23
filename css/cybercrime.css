@@ -1,0 +1,279 @@
+/* Basic Reset */
+ body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+/* Wrapper for centering */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0; /* Remove padding to use full screen */
+}
+
+/* Container for content with left margin */
+.container {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 30px; /* Adjust the left margin as needed */
+    margin-right: 30px; /* Optional: Add margin on the right if needed */
+    max-width: calc(100vw - 60px); /* Adjust to account for margin */
+    max-height: 100vh;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #71f802;
+    text-shadow: 0 0 10px #ff000000;
+    margin-top: 50px; /* Adjust to provide space for logo */
+}
+
+/* Logo positioning */
+.small-logo {
+    position: absolute;
+    top: -30px; /* Adjust as needed to fit the design */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    width: 40px; /* Set fixed width */
+    height: 40px; /* Set fixed height */
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 5px; /* Adjust to control roundness (5px for subtle rounding) */
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center; /* Center icon horizontally */
+    line-height: 40px; /* Center icon vertically */
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the home icon */
+.home-button i {
+    font-size: 20px;
+    vertical-align: middle; /* Ensure proper vertical alignment */
+}
+
+/* Change background on hover */
+.home-button:hover {
+    background-color: #42ff03;
+    color: #ffffff;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #ff4400;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p, section li {
+    font-size: 1rem;
+    color: #d4d4d4;
+}
+
+/* Highlighted text */
+.highlight {
+    background-color: #51ff00; /* Green highlight */
+    color: #000000;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+/* Interactive elements */
+a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00ff00;
+}
+
+button {
+    background-color: #ff0000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #42ff03;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Textarea Styles */
+textarea {
+    width: 100%;
+    background-color: #1c1c1cac;
+    color: #88ff00d5;
+    border: 1px solid #fcfcfc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+/* FAQ Section Styles */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    cursor: pointer;
+    color: #5eff01fe;
+    padding: 10px;
+    background-color: #000000af;
+    border: 1px solid #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #00000043;
+    color: #ff0000;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ff5e00;
+    background-color: #000000;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+
+/* Golden Hours Section */
+.golden-hours {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.golden-hours h2 {
+    font-size: 1.8rem;
+    color: #ff4400;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.golden-hours p {
+    font-size: 1rem;
+    color: #d4d4d4;
+}
+
+.golden-hours .highlight-green {
+    color: #00ff00; /* Green color for highlighted text */
+    font-weight: bold; /* Optional: Make text bold for emphasis */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Disclaimer */
+.disclaimer {
+    font-size: 0.9rem;
+    color: #d4d4d4;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    border-top: 1px solid #333;
+    color: #d4d4d4;
+}
+
+/* Style for the phases of cyber crime section titles */
+.cyber-crime-phases h2 {
+    color: #ff4400; /* Original color for the section heading */
+    border-bottom: 2px solid #ff0000; /* Original underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for specific phase items */
+.cyber-crime-phases .pre-crime-phase strong,
+.cyber-crime-phases .crime-phase strong,
+.cyber-crime-phases .post-crime-phase strong,
+.cyber-crime-phases .recovery-phase strong {
+    color: #00ff00; /* Green color for all strong text in phase items */
+}
+
+/* Style for the Step-by-Step Reporting Guide section */
+#reporting-guide h2 {
+    color: #ff4400; /* Color for the section heading */
+    border-bottom: 2px solid #ff0000; /* Underline for emphasis */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for strong tags in the reporting guide section */
+#reporting-guide strong {
+    color: #00ff00; /* Green color for strong text */
+}
+
+/* Style for the Contact Information section */
+#contact-info strong {
+    color: #00ff00; /* Green color for strong text */
+}

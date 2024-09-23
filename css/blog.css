@@ -1,0 +1,105 @@
+/* Blog Section */
+.blog-section {
+    background-color: #000;
+    color: #f2f2f2;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: -2rem;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    color: #00ff00; /* Terminal green */
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Glowing effect */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 15px; /* Smaller gap between the cards */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background-color: #161b22;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 400px; /* Increased height for cards */
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.blog-image img {
+    width: 100%;
+    height: 150px; /* Increased image height */
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 10px;
+}
+
+.blog-content h3 {
+    color: #00ff00;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.blog-date {
+    color: #8b949e;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-description {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: #c9d1d9;
+    max-height: 80px; /* Increased height to accommodate more text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.blog-read-more {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #00ff00;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.blog-read-more:hover {
+    background-color: #00cc00;
+}
+
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* One column on extra small screens */
+    }
+}

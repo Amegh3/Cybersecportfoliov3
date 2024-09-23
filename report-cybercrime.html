@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide on how to report a cyber crime, including phases of cyber crime, reporting flowchart, and contact information.">
+    <title>What to Do After a Cyber Attack</title>
+    <link rel="stylesheet" href="/css/cybercrime.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" defer></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en', // Set this to the language of your page
+          includedLanguages:'en,hi,ta,ml,kn,te,gu,mr,pa,bn,as,or,sd,ne,si', // List of Indian languages you want to support
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <a href="/index.html" class="home-button" aria-label="Home"><i class="fas fa-home"></i></a>
+                <img src="" alt="Small Logo" class="small-logo">
+                <h1><i class="fas fa-shield-alt"></i> How to Report a Cyber Crime</h1>
+            </div>
+        </header>
+
+        <!-- Phases of Cyber Crime -->
+        <section id="cyber-crime-phases" class="cyber-crime-phases section">
+            <h2><i class="fas fa-calendar-alt"></i> Phases of Cyber Crime</h2>
+            <p>Understanding the phases of cyber crime can help in both prevention and response. Cyber crimes typically unfold through the following phases:</p>
+            <ul>
+                <li class="pre-crime-phase"><strong>Pre-Crime Phase:</strong> This phase involves planning and preparation, such as gathering information about potential victims and developing malicious tools or strategies.</li>
+                <li class="crime-phase"><strong>Crime Phase:</strong> The actual execution of the cybercrime, including activities like hacking into systems, deploying malware, or conducting phishing attacks.</li>
+                <li class="post-crime-phase"><strong>Post-Crime Phase:</strong> Efforts to cover tracks, avoid detection, and potentially use stolen data or funds for personal gain.</li>
+                <li class="recovery-phase"><strong>Recovery Phase:</strong> Actions taken to recover from the crime, including restoring systems, investigating the breach, and mitigating further risks. It also includes legal and procedural follow-up to seek justice and prevent future incidents.</li>
+            </ul>
+        </section>
+        
+        <!-- Interactive Reporting Flowchart -->
+        <section id="interactive-flowchart" class="interactive-flowchart section">
+            <h2><i class="fas fa-project-diagram"></i> Interactive Reporting Flowchart</h2>
+            <div class="mermaid">
+                    graph TD;
+                    A[Start] --> B{Is it an emergency?};
+                    B -- Yes --> C[Contact Local Police];
+                    B -- No --> D[Go to National Cyber Crime Reporting Portal];
+                    D --> E[Fill Out the Form];
+                    E --> F[Submit Report];
+                    F --> G[Receive Confirmation];
+                    G --> H[Track Report Status];
+                    C --> I[Immediate Assistance];
+            </div>
+        </section>
+
+        <!-- Golden Hours Section -->
+        <section id="golden-hours" class="golden-hours section">
+            <div class="alert-box">
+                <h2><i class="fas fa-clock"></i> The Importance of Reporting Early</h2>
+                <p>Timely reporting within the <span class="highlight-green">first 24-48 hours</span>—known as the <span class="highlight-green">"golden hours"</span>—is crucial for effective intervention. During this period, the chances of data recovery and identifying the perpetrators are significantly higher. Quick action can prevent further damage, aid in the restoration of affected systems, and improve the chances of recovering lost funds or data.</p>
+            </div>
+        </section>
+
+        <!-- Demo Report -->
+        <section id="demo-report" class="demo-report section">
+            <h2><i class="fas fa-file-alt"></i> Demo Report</h2>
+            <p>Below is a sample report you can use to report a cyber crime. Copy this template, fill in the specific details of your incident, and submit it to the appropriate authorities.</p>
+            <textarea id="demo-report-text" rows="20" cols="80" readonly>
+Subject: Report of Cyber Crime - [Your Case Reference Number]
+
+Dear Sir/Madam,
+
+I am writing to report a cyber crime that has recently taken place. Below are the details of the incident:
+
+Date and Time of Incident:
+[Insert Date and Time]
+
+Description of Incident:
+[Provide a detailed description of the cybercrime, including how it was discovered, the nature of the attack, and any actions taken by you or your organization]
+
+Victim Details:
+[Provide your details or the details of the affected party, including contact information]
+
+Evidence Collected:
+[Describe any evidence collected, such as screenshots, email headers, logs, or other pertinent information]
+
+Impact of Incident:
+[Explain the impact of the cybercrime on your organization or personal life, including financial losses, operational disruptions, or any data breaches]
+
+Actions Taken:
+[Detail any steps you have taken to address the incident, such as contacting your bank, changing passwords, or engaging with cybersecurity professionals]
+
+Requested Action:
+[Specify what actions you are requesting from the authorities, such as investigation, recovery of lost funds, or assistance in mitigating further risks]
+
+Please find attached any relevant documents or evidence that might assist in the investigation.
+
+I appreciate your prompt attention to this matter and look forward to your assistance in resolving this issue.
+
+Thank you for your support.
+
+Sincerely,
+[Your Name]
+[Your Contact Information]
+            </textarea>
+            <button class="copy-btn" onclick="copyReport()"><i class="fas fa-copy"></i> Copy Report</button>
+        </section>
+
+        <!-- Step-by-Step Reporting Guide -->
+        <section id="reporting-guide" class="reporting-guide section">
+            <h2><i class="fas fa-steps"></i> Step-by-Step Guide to Report a Cyber Crime</h2>
+            <ol>
+                <li><strong>Visit the Reporting Portal:</strong> Go to the <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="link"><i class="fas fa-link"></i> National Cyber Crime Reporting Portal</a>.</li>
+                <li><strong>Select Crime Type:</strong> Choose the category that best fits your cyber crime.</li>
+                <li><strong>Complete the Form:</strong> Enter all required information about the incident and attach any evidence.</li>
+                <li><strong>Submit:</strong> Review and submit the form. You will receive a confirmation or reference number.</li>
+                <li><strong>Follow Up:</strong> Check the status of your report and follow up if necessary.</li>
+            </ol>
+        </section>
+
+        <!-- Contact Information -->
+        <section id="contact-info" class="contact-info section">
+            <h2><i class="fas fa-phone-alt"></i> Contact Information for Cyber Crime Issues</h2>
+            <p><strong>Cyber Crime Helpline Number:</strong> <i class="fas fa-phone"></i> 155260</p>
+            <p><strong>National Cyber Crime Reporting Portal:</strong> <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="link"><i class="fas fa-link"></i> https://cybercrime.gov.in</a></p>
+            <p><strong>Local Police Station:</strong> For immediate assistance, contact your local police station.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faqs" class="faqs section">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" data-toggle="faq1"><i class="fas fa-question"></i> What should I include in my report?</div>
+                <div class="faq-answer" id="faq1">Include details like the date and time of the incident, description of the crime, victim details, evidence collected, impact, actions taken, and requested action.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" data-toggle="faq2"><i class="fas fa-question"></i> How do I gather evidence for my report?</div>
+                <div class="faq-answer" id="faq2">Evidence can include screenshots, email headers, logs, and other relevant documents. Ensure to collect as much relevant information as possible.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" data-toggle="faq3"><i class="fas fa-question"></i> What if I need immediate assistance?</div>
+                <div class="faq-answer" id="faq3">If you require immediate assistance, contact your local police station or emergency services.</div>
+            </div>
+        </section>
+
+        <!-- Google Translate Widget -->
+        <section id="google-translate-widget" class="section">
+            <h2><i class="fas fa-language"></i> Your Language, Your Way</h2>
+            <div id="google_translate_element"></div>
+        </section>
+
+        <!-- External Link and Disclaimer -->
+        <section id="external-link-disclaimer" class="external-link-disclaimer section">
+            <a href="https://staysafeonline.org/" target="_blank" rel="noopener noreferrer" class="external-link"><i class="fas fa-external-link-alt"></i> Stay Safe Online</a>
+            <p class="disclaimer">Disclaimer: Links to external sites are for informational purposes only. This site provides general guidance on reporting cyber crimes. For personalized advice and detailed assistance, please consult a cybersecurity expert.</p>
+            <p>© 2024 CyberSec Portfolio-report cybercrime. All rights reserved.</p>
+            <p>Created & Desinged by Amegh A</p>
+
+        </section>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // Copy Report Functionality
+        function copyReport() {
+            const reportText = document.getElementById('demo-report-text');
+            reportText.select();
+            reportText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(reportText.value)
+                .then(() => {
+                    alert('Report copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+        }
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function () {
+                const isActive = this.classList.toggle('active');
+                const answer = document.getElementById(this.dataset.toggle);
+                answer.style.display = isActive ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

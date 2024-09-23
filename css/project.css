@@ -1,0 +1,195 @@
+/* Projects Section */
+.projects-section {
+    background-color: #000; /* Black background for a cybersecurity feel */
+    color: #f2f2f2; /* Light gray text color */
+    padding: 4cm 2cm; /* Padding around the section */
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow to avoid content spill */
+    margin-top: 0cm; /* Remove margin to keep section in place */
+}
+
+/* Container for centering content */
+.projects-container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center container */
+}
+
+/* Title Styling */
+.projects-title {
+    font-size: 2.5rem; /* Adjusted font size for title */
+    color: #00ff00; /* Neon green for title */
+    margin-bottom: 30px; /* Increased space below title */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    text-align: center; /* Center the title */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Glowing text effect */
+}
+
+/* Gallery Styling */
+.projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px; /* Space between projects (both rows and columns) */
+    padding: 20px; /* Padding around the gallery */
+}
+
+/* Project Item Styling */
+.project-item {
+    width: 100%; /* Ensure items take the full width of their grid column */
+    max-width: 300px; /* Limit the maximum width to keep consistency */
+    height: 350px; /* Fixed height for each project item */
+    background-color: #1a1a1a; /* Dark background for a cybersecurity theme */
+    color: #f2f2f2; /* Light text color */
+    padding: 15px; /* Padding inside the project content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon green shadow for effect */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    position: relative; /* Relative positioning for inner elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Project Item */
+.project-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the project box */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Increase the shadow on hover */
+}
+
+/* Image Styling */
+.project-image {
+    width: 100%; /* Ensure images fit the project box */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without stretching */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Project Info */
+.project-info {
+    text-align: center; /* Center text within the project item */
+    flex: 1; /* Allow the info section to grow and shrink */
+    overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.4rem; /* Title font size */
+    margin-bottom: 8px; /* Space below the title */
+    color: #00ff00; /* Neon green text color */
+}
+
+/* Project Description */
+.project-description {
+    font-size: 0.9rem; /* Description font size */
+    margin-bottom: 10px; /* Space below the description */
+}
+
+/* Project Association */
+.project-association {
+    font-size: 0.9rem; /* Font size for association */
+    margin-bottom: 10px; /* Space below association */
+    color: #00ff00; /* Neon green for emphasis */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.project-association i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #00ff00; /* Neon green icon color */
+}
+
+/* Features Title */
+.features-title {
+    font-size: 1.1rem; /* Font size for features title */
+    margin-bottom: 10px; /* Space below the features title */
+    color: #00ff00; /* Neon green for emphasis */
+    text-align: left; /* Align features title to the left */
+    background-color: #333; /* Dark background for better contrast */
+    padding: 5px; /* Padding inside the features title */
+    border-radius: 5px; /* Rounded corners for the title background */
+    z-index: 1; /* Ensure the title stays above other elements */
+}
+
+/* Project Features */
+.project-features {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    font-size: 0.9rem; /* Slightly smaller font size for list items */
+    margin-bottom: 10px; /* Space below features list */
+}
+
+/* Feature List Item */
+.project-features li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Feature Button */
+.feature-button {
+    background-color: #00ff00; /* Neon green background for buttons */
+    color: #000; /* Black text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px; /* Padding inside buttons */
+    font-size: 0.9rem; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 5px; /* Space below buttons */
+}
+
+/* Hover Effect for Feature Button */
+.feature-button:hover {
+    background-color: #00cc00; /* Slightly darker green on hover */
+}
+
+/* Custom Scrollbar Styling */
+.project-info::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.project-info::-webkit-scrollbar-thumb {
+    background-color: #00ff00; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.project-info::-webkit-scrollbar-track {
+    background-color: #333; /* Background color of the scrollbar track */
+}
+
+/* GitHub Button Styling */
+.project-link {
+    background-color: #1efd00; /* White background for GitHub button */
+    color: #000; /* Black text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Rounded corners */
+    padding: 5px 10px; /* Padding inside button */
+    font-size: 0.9rem; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Make link behave like a button */
+    margin-bottom: 5px; /* Space below button */
+}
+
+/* Hover Effect for GitHub Button */
+.project-link:hover {
+    background-color: #f7f7f7; /* Slightly darker white on hover */
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 1200px) {
+    .projects-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-gallery {
+        grid-template-columns: 1fr; /* 1 column for smaller screens */
+    }
+}

@@ -1,0 +1,91 @@
+/* Freelance Section */
+.freelance-section {
+    background-color: #000; /* Dark background for cybersecurity theme */
+    color: #f2f2f2; /* Light gray text for contrast */
+    padding: 4cm 2cm; /* Padding around the section */
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-top: -2cm;
+}
+
+/* Title Styling */
+.freelance-title {
+    font-size: 2.5rem; /* Large font size for title */
+    color: #00ff00; /* Neon green for cybersecurity feel */
+    margin-bottom: 20px; /* Space below title */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
+    text-align: center; /* Center title */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Neon glow effect */
+}
+
+/* Freelance Services Grid */
+.freelance-services {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px; /* Space between grid items */
+    margin-top: 40px; /* Space above grid */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for larger screens */
+}
+
+/* Individual Service Item */
+.service-item {
+    background-color: #161b22; /* Dark gray for service card background */
+    padding: 30px; /* Padding inside the service card */
+    border-radius: 10px; /* Rounded corners for card */
+    text-align: center; /* Center text */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Subtle neon glow shadow */
+    transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Stronger glow on hover */
+}
+
+/* Service Icon */
+.service-icon {
+    font-size: 3rem; /* Large icon size */
+    color: #00ff00; /* Neon green for the icons */
+    margin-bottom: 20px; /* Space below icon */
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.5rem; /* Medium size for service title */
+    color: #f2f2f2; /* Light gray for readability */
+    margin-bottom: 10px; /* Space below title */
+    font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+/* Service Description */
+.service-description {
+    font-size: 1rem; /* Standard font size */
+    color: #8b949e; /* Muted gray color for description */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .freelance-services {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .service-item {
+        padding: 20px; /* Adjust padding for smaller cards */
+    }
+
+    .service-title {
+        font-size: 1.25rem; /* Smaller title font size */
+    }
+
+    .service-description {
+        font-size: 0.9rem; /* Smaller description font size */
+    }
+}

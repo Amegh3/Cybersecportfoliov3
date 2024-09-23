@@ -1,0 +1,82 @@
+/* About Section */
+.about-section {
+    background-color: #000; /* Black background for a cybersecurity feel */
+    color: #f2f2f2; /* Light gray text color */
+    padding: 5cm 2cm; /* Padding around the section */
+    min-height: 100vh; /* Full viewport height */
+    position: relative; /* Relative positioning */
+    top: 0; /* Ensure it starts at the top of the viewport */
+    margin-top: 0; /* No margin to push it down */
+    overflow: hidden; /* Hide overflow to avoid content spill */
+    display: flex; /* Use flexbox for image and text side by side */
+    align-items: center; /* Vertically center content */
+    justify-content: space-around; /* Space out image and text */
+    margin-top:1cm;
+}
+
+/* Container for centering content */
+.about-container {
+    max-width: 900px; /* Width control for better alignment */
+    margin: auto; /* Center container */
+    display: flex; /* Flex for image and text alignment */
+    align-items: center;
+    justify-content: space-between; /* Space between image and text */
+}
+
+/* Image Styling */
+.about-image {
+    width: 200%; /* Adjust width for image size */
+    max-width:400x; /* Set a max width */
+    height: auto; /* Keep image aspect ratio */
+    border-radius: 8px; /* Slight rounding of image corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Glowing effect around image */
+    margin-right:-5cm;
+}
+
+/* Text container */
+.about-right {
+    width: 50%; /* Text container width */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Padding between image and text */
+}
+
+/* Title Styling */
+.about-title {
+    font-size: 3rem; /* Large font for title */
+    color: #00ff00; /* Neon green for title */
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glowing text effect */
+}
+
+/* Text Styling */
+.about-text {
+    font-size: 1.2rem; /* Readable font size */
+    line-height: 1.6; /* Space out lines */
+    color: #f2f2f2; /* Light gray text */
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Terminal-style font */
+}
+
+/* Highlight Text */
+.highlight {
+    color: #48f908; /* Neon green highlight */
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .about-image {
+        width: 70%; /* Increase image width for smaller screens */
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .about-right {
+        width: 100%; /* Full width for text on small screens */
+        padding-left: 0; /* Remove left padding */
+    }
+}
